@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FileOrgonizer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DestinationPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\Public\Pictures</Value>
+    </Setting>
+    <Setting Name="SourcePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\Public\Desktop</Value>
+    </Setting>
+    <Setting Name="PatternMP4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;YYYY&gt;\&lt;MM&gt;\&lt;DD&gt;\&lt;YYYY&gt;&lt;MM&gt;&lt;DD&gt;_&lt;hh&gt;&lt;mm&gt;&lt;ss&gt;.&lt;ex&gt;</Value>
+    </Setting>
+    <Setting Name="PatternJPG" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;YYYY&gt;\&lt;MM&gt;\&lt;DD&gt;\&lt;YYYY&gt;&lt;MM&gt;&lt;DD&gt;_&lt;hh&gt;&lt;mm&gt;&lt;ss&gt;.&lt;ex&gt;</Value>
+    </Setting>
+    <Setting Name="PatternEML" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;YYYY&gt;-&lt;MM&gt;-&lt;DD&gt;\&lt;YYYY&gt;&lt;TITLE&gt;.&lt;ex&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -25,18 +25,6 @@ namespace FileOrgonizer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Public\\Pictures")]
-        public string DestinationPath {
-            get {
-                return ((string)(this["DestinationPath"]));
-            }
-            set {
-                this["DestinationPath"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Public\\Desktop")]
         public string SourcePath {
             get {
@@ -80,6 +68,42 @@ namespace FileOrgonizer.Properties {
             }
             set {
                 this["PatternEML"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Public\\Pictures\\Camera Roll")]
+        public string DestPathMP4 {
+            get {
+                return ((string)(this["DestPathMP4"]));
+            }
+            set {
+                this["DestPathMP4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Public\\Pictures\\Camera Roll")]
+        public string DestPathJPG {
+            get {
+                return ((string)(this["DestPathJPG"]));
+            }
+            set {
+                this["DestPathJPG"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Public\\Documents\\Mails")]
+        public string DestPathEML {
+            get {
+                return ((string)(this["DestPathEML"]));
+            }
+            set {
+                this["DestPathEML"] = value;
             }
         }
     }

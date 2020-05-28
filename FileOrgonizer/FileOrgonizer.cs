@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Media;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -22,42 +24,33 @@ namespace FileOrgonizer
             Close();
         }
 
-        private void Button4_Click(object sender, EventArgs e)
-        {
-            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
-            {
-                textBox1.Text = folderBrowserDialog1.SelectedPath;
-                button2.Focus();
-            }
-        }
-
-        private void Button3_Click(object sender, EventArgs e)
-        {
-            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
-            {
-                textBox2.Text = folderBrowserDialog1.SelectedPath;
-                button4.Focus();
-            }
-        }
-
         private void Button6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("<YY>	Year (20)\r<YYYY>	Year (2020)\r<M>	Month (2)\r<MM>	Month (02)\r<D>	Day (1)\r<DD>	Day (01)\r<h>	Hour (8)\r<hh>	Hour (08)\r<m>	Minute (9)\r<mm>	Minute (09)\r<s>	Second (5)\r<ss>	Second (05)\r<ex>	jpg\r<EX>	JPG\n<TITLE>	Title");
+            textBox4.AppendText("--Help--\r\n<YY>	Year (20)\r\n<YYYY>	Year (2020)\r\n<M>	Month (2)\r\n<MM>	Month (02)\r\n<D>	Day (1)\r\n<DD>	Day (01)\r\n<h>	Hour (8)\r\n<hh>	Hour (08)\r\n<m>	Minute (9)\r\n<mm>	Minute (09)\r\n<s>	Second (5)\r\n<ss>	Second (05)\r\n<ex>	jpg\r\n<EX>	JPG\r\n<TITLE>	Title\r\n\r\n");
+            textBox4.Focus();
+        }
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = false)]
+        static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr w, IntPtr l);
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Show(Cursor.Position);
         }
 
-        private void Button4_Click_1(object sender, EventArgs e)
+        private void Scan(bool copy)
         {
+            progressBar1.Value = 0;
+            SendMessage(progressBar1.Handle, 1040, (IntPtr)1, IntPtr.Zero);
             if (!System.IO.Directory.Exists(textBox1.Text))
             {
-                MessageBox.Show("Source path is not exist.");
+                textBox4.AppendText("Source path is not exist.\r\n");
+                progressBar1.Value = progressBar1.Maximum;
+                SendMessage(progressBar1.Handle, 1040, (IntPtr)2, IntPtr.Zero);
+                SystemSounds.Hand.Play();
                 return;
             }
-            if (!System.IO.Directory.Exists(textBox2.Text))
-            {
-                MessageBox.Show("Destination path is not exist.");
-                return;
-            }
-
+            string dPath = string.Empty;
+            progressBar1.Style = ProgressBarStyle.Marquee;
             textBox4.Clear();
             List<string> MP4_filesList = new List<string>(Directory.GetFiles(textBox1.Text,
                 "*.mp4", SearchOption.AllDirectories));
@@ -66,87 +59,121 @@ namespace FileOrgonizer
             List<string> EML_filesList = new List<string>(Directory.GetFiles(textBox1.Text,
                 "*.eml", SearchOption.AllDirectories));
 
+            progressBar1.Style = ProgressBarStyle.Blocks;
+
             textBox4.AppendText("Find " + MP4_filesList.Count + " MP4\r\n");
             textBox4.AppendText("Find " + JPG_filesList.Count + " JPG\r\n");
             textBox4.AppendText("Find " + EML_filesList.Count + " EML\r\n");
 
+            progressBar1.Maximum = MP4_filesList.Count + JPG_filesList.Count + EML_filesList.Count;
 
             // MP4
-            progressBar1.Value = 0;
-            progressBar1.Maximum = MP4_filesList.Count;
+            dPath = Properties.Settings.Default.DestPathMP4;
             foreach (string file in MP4_filesList)
             {
                 progressBar1.Value += 1;
                 DateTime fileDate = (DateTime)PhotoLibaryToolkit.Framework.VideoInfo.GetVideoFileTakenDate(file);
-                string destPath = StringGenerator(fileDate, Properties.Settings.Default.PatternMP4, "mp4",null);
+                string destPath = StringGenerator(fileDate, Properties.Settings.Default.PatternMP4, "mp4", null);
                 string[] fileParts = destPath.Split('/', '\\');
                 for (int i = 0; i < fileParts.Length - 1; i++)
                 {
-                    string directory = textBox2.Text;
+                    string directory = dPath;
                     for (int j = 0; j <= i; j++)
                     {
                         directory += "\\" + fileParts[j];
                     }
+
                     if (!Directory.Exists(directory))
                         Directory.CreateDirectory(directory);
                 }
-                string d = textBox2.Text + "\\" + destPath;
-                File.Move(file, d);
+
+                string d = dPath + "\\" + destPath;
+                if (copy)
+                {
+                    File.Copy(file, d);
+                }
+                else
+                {
+                    File.Move(file, d);
+                }
             }
 
-
-
             // JPG
-            progressBar1.Value = 0;
-            progressBar1.Maximum = JPG_filesList.Count;
+            dPath = Properties.Settings.Default.DestPathJPG;
             foreach (string file in JPG_filesList)
             {
                 progressBar1.Value += 1;
                 DateTime fileDate = (DateTime)PFP.Imaging.ImageInfo.GetTakenDate(file);
-                string destPath = StringGenerator(fileDate, Properties.Settings.Default.PatternJPG, "jpg",null);
+                string destPath = StringGenerator(fileDate, Properties.Settings.Default.PatternJPG, "jpg", null);
                 string[] fileParts = destPath.Split('/', '\\');
                 for (int i = 0; i < fileParts.Length - 1; i++)
                 {
-                    string directory = textBox2.Text;
+                    string directory = dPath;
                     for (int j = 0; j <= i; j++)
                     {
                         directory += "\\" + fileParts[j];
                     }
+
                     if (!Directory.Exists(directory))
                         Directory.CreateDirectory(directory);
                 }
-                string d = textBox2.Text + "\\" + destPath;
-                File.Move(file, d);
+
+                string d = dPath + "\\" + destPath;
+                if (copy)
+                {
+                    File.Copy(file, d);
+                }
+                else
+                {
+                    File.Move(file, d);
+                }
             }
 
             // EML
-            progressBar1.Value = 0;
-            progressBar1.Maximum = EML_filesList.Count;
+            dPath = Properties.Settings.Default.DestPathEML;
             foreach (string file in EML_filesList)
             {
                 progressBar1.Value += 1;
                 DateTime fileDate = GetDateTimeFromEML(file);
                 string fileTitle = GetTitleFromEML(file);
-                string destPath = StringGenerator(fileDate, Properties.Settings.Default.PatternEML, "eml", fileTitle);
+                string destPath = StringGenerator(fileDate, Properties.Settings.Default.PatternEML, "eml",
+                    fileTitle);
                 string[] fileParts = destPath.Split('/', '\\');
                 for (int i = 0; i < fileParts.Length - 1; i++)
                 {
-                    string directory = textBox2.Text;
+                    string directory = dPath;
                     for (int j = 0; j <= i; j++)
                     {
                         directory += "\\" + fileParts[j];
                     }
+
                     if (!Directory.Exists(directory))
                         Directory.CreateDirectory(directory);
                 }
-                string d = textBox2.Text + "\\" + destPath;
-                File.Move(file, d);
+
+                string d = dPath + "\\" + destPath;
+                if (copy)
+                {
+                    File.Copy(file, d);
+                }
+                else
+                {
+                    File.Move(file, d);
+                }
             }
 
-
+            if (progressBar1.Maximum != 0)
+            {
+                progressBar1.Value = progressBar1.Maximum;
+            }
+            else
+            {
+                progressBar1.Maximum = 1;
+                progressBar1.Value = 1;
+            }
+            SystemSounds.Beep.Play();
         }
-
-        public static string StringGenerator(DateTime date, string format, string ext, string title)
+        public string StringGenerator(DateTime date, string format, string ext, string title)
         {
             return format
                 .Replace("<YYYY>", date.Year.ToString())
@@ -163,20 +190,35 @@ namespace FileOrgonizer
                 .Replace("<ss>", date.Second.ToString("00"))
                 .Replace("<ex>", ext.ToLower())
                 .Replace("<EX>", ext.ToUpper())
-                .Replace("<TITLE>", title.Replace(':', '_').Replace('/', '_').Replace('\\', '_'));
+                .Replace("<TITLE>", RemoveIC(title));
+        }
+
+        public string RemoveIC(string text)
+        {
+            if (text == null)
+            {
+                return null;
+            }
+            return text.Replace('\\', '_')
+                .Replace('/', '_')
+                .Replace(':', '_')
+                .Replace('*', '_')
+                .Replace('?', '_')
+                .Replace('\"', '_')
+                .Replace('<', '_')
+                .Replace('>', '_')
+                .Replace('|', '_');
         }
 
         private void FileOrgonizer_Load(object sender, EventArgs e)
         {
             comboBox1.SelectedIndex = 0;
             textBox1.Text = Properties.Settings.Default.SourcePath;
-            textBox2.Text = Properties.Settings.Default.DestinationPath;
         }
 
         private void FileOrgonizer_FormClosing(object sender, FormClosingEventArgs e)
         {
             Properties.Settings.Default.SourcePath = textBox1.Text;
-            Properties.Settings.Default.DestinationPath = textBox2.Text;
             Properties.Settings.Default.Save();
         }
 
@@ -193,7 +235,7 @@ namespace FileOrgonizer
 
         private string YML_GetValue(string file, string tag)
         {
-            string ou = null; 
+            string ou = null;
             foreach (string line in System.IO.File.ReadAllLines(file))
             {
                 if (line.Split(':')[0].Trim().ToLower() == tag.ToLower().Trim())
@@ -226,15 +268,40 @@ namespace FileOrgonizer
             {
                 case 0:
                     it = Properties.Settings.Default.PatternMP4;
+                    textBox2.Text = Properties.Settings.Default.DestPathMP4;
                     break;
                 case 1:
                     it = Properties.Settings.Default.PatternJPG;
+                    textBox2.Text = Properties.Settings.Default.DestPathJPG;
                     break;
                 case 2:
                     it = Properties.Settings.Default.PatternEML;
+                    textBox2.Text = Properties.Settings.Default.DestPathEML;
                     break;
             }
             textBox3.Text = it;
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog f = new FolderBrowserDialog
+            {
+                SelectedPath = textBox1.Text
+            };
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.Text = f.SelectedPath;
+            }
+        }
+
+        private void scanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Scan(false);
+        }
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Scan(true);
         }
     }
 }

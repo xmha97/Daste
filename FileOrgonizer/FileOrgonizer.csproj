@@ -39,6 +39,7 @@
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -125,6 +126,12 @@
   <ItemGroup>
     <Content Include="Icon.ico" />
     <Content Include="MediaInfo.dll" />
+    <None Include="Resources\Cut.png" />
+    <None Include="Resources\Copy.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Open.png" />
+    <None Include="Resources\Help.png" />
+    <None Include="Resources\Scan.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -2,9 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FileOrgonizer.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="DestinationPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\Public\Pictures</Value>
-    </Setting>
     <Setting Name="SourcePath" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Users\Public\Desktop</Value>
     </Setting>
@@ -16,6 +13,15 @@
     </Setting>
     <Setting Name="PatternEML" Type="System.String" Scope="User">
       <Value Profile="(Default)">&lt;YYYY&gt;-&lt;MM&gt;-&lt;DD&gt;\&lt;YYYY&gt;&lt;TITLE&gt;.&lt;ex&gt;</Value>
+    </Setting>
+    <Setting Name="DestPathMP4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\Public\Pictures\Camera Roll</Value>
+    </Setting>
+    <Setting Name="DestPathJPG" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\Public\Pictures\Camera Roll</Value>
+    </Setting>
+    <Setting Name="DestPathEML" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\Public\Documents\Mails</Value>
     </Setting>
   </Settings>
 </SettingsFile>

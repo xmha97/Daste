@@ -3,6 +3,10 @@
 ## Screenshot
 ![FileOrgonizer](https://i.imgur.com/DRDlsFC.png)
 
+## Donate
+[Liberapay](https://liberapay.com/xmha97/donate)
+[Bountysource](https://salt.bountysource.com/checkout/amount?team=xmha97)
+
 ## License
 [![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)  
 

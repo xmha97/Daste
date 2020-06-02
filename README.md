@@ -1,5 +1,8 @@
 # FileOrgonizer
 
+## Social
+[![Twitter](https://img.shields.io/twitter/follow/xmha97?style=for-the-badge)](https://twitter.com/intent/follow?screen_name=xmha97)
+
 ## Screenshot
 
 ![FileOrgonizer](https://i.imgur.com/DRDlsFC.png)

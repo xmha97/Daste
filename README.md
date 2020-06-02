@@ -4,6 +4,10 @@
 
 ![FileOrgonizer](https://i.imgur.com/DRDlsFC.png)
 
+# Develop
+
+![Fork](https://img.shields.io/github/forks/xmha97/FileOrgonizer?style=for-the-badge)
+
 ## Support
 
 [![Patreon][patreon-badge]][patreon]

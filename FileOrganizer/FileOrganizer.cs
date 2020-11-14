@@ -49,7 +49,7 @@ namespace FileOrganizer
                 SystemSounds.Hand.Play();
                 return;
             }
-            string dPath = string.Empty;
+
             progressBar1.Style = ProgressBarStyle.Marquee;
             textBox4.Clear();
             List<string> MP4_filesList = new List<string>(Directory.GetFiles(textBox1.Text,
@@ -68,33 +68,46 @@ namespace FileOrganizer
             progressBar1.Maximum = MP4_filesList.Count + JPG_filesList.Count + EML_filesList.Count;
 
             // MP4
-            dPath = Properties.Settings.Default.DestPathMP4;
+            string dPath = Properties.Settings.Default.DestPathMP4;
             foreach (string file in MP4_filesList)
             {
                 progressBar1.Value += 1;
-                DateTime fileDate = (DateTime)PhotoLibaryToolkit.Framework.VideoInfo.GetVideoFileTakenDate(file);
-                string destPath = StringGenerator(fileDate, Properties.Settings.Default.PatternMP4, "mp4", null);
-                string[] fileParts = destPath.Split('/', '\\');
-                for (int i = 0; i < fileParts.Length - 1; i++)
+                Application.DoEvents();
+                try
                 {
-                    string directory = dPath;
-                    for (int j = 0; j <= i; j++)
+                    DateTime fileDate = (DateTime)PhotoLibaryToolkit.Framework.VideoInfo.GetVideoFileTakenDate(file);
+                    string destPath = StringGenerator(fileDate, Properties.Settings.Default.PatternMP4, "mp4", null);
+                    string[] fileParts = destPath.Split('/', '\\');
+                    for (int i = 0; i < fileParts.Length - 1; i++)
                     {
-                        directory += "\\" + fileParts[j];
+                        string directory = dPath;
+                        for (int j = 0; j <= i; j++)
+                        {
+                            directory += "\\" + fileParts[j];
+                        }
+
+                        if (!Directory.Exists(directory))
+                            Directory.CreateDirectory(directory);
                     }
 
-                    if (!Directory.Exists(directory))
-                        Directory.CreateDirectory(directory);
+                    string d = dPath + "\\" + destPath;
+                    if (File.Exists(d))
+                    {
+                        File.Delete(d);
+                        textBox4.AppendText("Error: Exist -> Delete: " + d + "\r\n");
+                    }
+                    if (copy)
+                    {
+                        File.Copy(file, d);
+                    }
+                    else
+                    {
+                        File.Move(file, d);
+                    }
                 }
-
-                string d = dPath + "\\" + destPath;
-                if (copy)
+                catch (Exception ex)
                 {
-                    File.Copy(file, d);
-                }
-                else
-                {
-                    File.Move(file, d);
+                    textBox4.AppendText("Error " + file + " MSG: " + ex.Message + "\r\n");
                 }
             }
 
@@ -103,29 +116,42 @@ namespace FileOrganizer
             foreach (string file in JPG_filesList)
             {
                 progressBar1.Value += 1;
-                DateTime fileDate = (DateTime)PFP.Imaging.ImageInfo.GetTakenDate(file);
-                string destPath = StringGenerator(fileDate, Properties.Settings.Default.PatternJPG, "jpg", null);
-                string[] fileParts = destPath.Split('/', '\\');
-                for (int i = 0; i < fileParts.Length - 1; i++)
+                Application.DoEvents();
+                try
                 {
-                    string directory = dPath;
-                    for (int j = 0; j <= i; j++)
+                    DateTime fileDate = (DateTime)PFP.Imaging.ImageInfo.GetTakenDate(file);
+                    string destPath = StringGenerator(fileDate, Properties.Settings.Default.PatternJPG, "jpg", null);
+                    string[] fileParts = destPath.Split('/', '\\');
+                    for (int i = 0; i < fileParts.Length - 1; i++)
                     {
-                        directory += "\\" + fileParts[j];
+                        string directory = dPath;
+                        for (int j = 0; j <= i; j++)
+                        {
+                            directory += "\\" + fileParts[j];
+                        }
+
+                        if (!Directory.Exists(directory))
+                            Directory.CreateDirectory(directory);
                     }
 
-                    if (!Directory.Exists(directory))
-                        Directory.CreateDirectory(directory);
+                    string d = dPath + "\\" + destPath;
+                    if (File.Exists(d))
+                    {
+                        File.Delete(d);
+                        textBox4.AppendText("Error: Exist -> Delete: " + d + "\r\n");
+                    }
+                    if (copy)
+                    {
+                        File.Copy(file, d);
+                    }
+                    else
+                    {
+                        File.Move(file, d);
+                    }
                 }
-
-                string d = dPath + "\\" + destPath;
-                if (copy)
+                catch (Exception ex)
                 {
-                    File.Copy(file, d);
-                }
-                else
-                {
-                    File.Move(file, d);
+                    textBox4.AppendText("Error " + file + " MSG: " + ex.Message + "\r\n");
                 }
             }
 
@@ -134,45 +160,59 @@ namespace FileOrganizer
             foreach (string file in EML_filesList)
             {
                 progressBar1.Value += 1;
-                DateTime fileDate = GetDateTimeFromEML(file);
-                string fileTitle = GetTitleFromEML(file);
-                string destPath = StringGenerator(fileDate, Properties.Settings.Default.PatternEML, "eml",
-                    fileTitle);
-                string[] fileParts = destPath.Split('/', '\\');
-                for (int i = 0; i < fileParts.Length - 1; i++)
+                Application.DoEvents();
+                try
                 {
-                    string directory = dPath;
-                    for (int j = 0; j <= i; j++)
+                    DateTime fileDate = GetDateTimeFromEML(file);
+                    string fileTitle = GetTitleFromEML(file);
+                    string destPath = StringGenerator(fileDate, Properties.Settings.Default.PatternEML, "eml",
+                        fileTitle);
+                    string[] fileParts = destPath.Split('/', '\\');
+                    for (int i = 0; i < fileParts.Length - 1; i++)
                     {
-                        directory += "\\" + fileParts[j];
+                        string directory = dPath;
+                        for (int j = 0; j <= i; j++)
+                        {
+                            directory += "\\" + fileParts[j];
+                        }
+
+                        if (!Directory.Exists(directory))
+                            Directory.CreateDirectory(directory);
                     }
 
-                    if (!Directory.Exists(directory))
-                        Directory.CreateDirectory(directory);
+                    string d = dPath + "\\" + destPath;
+                    if (File.Exists(d))
+                    {
+                        File.Delete(d);
+                        textBox4.AppendText("Error: Exist -> Delete: " + d + "\r\n");
+                    }
+                    if (copy)
+                    {
+                        File.Copy(file, d);
+                    }
+                    else
+                    {
+                        File.Move(file, d);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    textBox4.AppendText("Error " + file + " MSG: " + ex.Message + "\r\n");
                 }
 
-                string d = dPath + "\\" + destPath;
-                if (copy)
+                if (progressBar1.Maximum != 0)
                 {
-                    File.Copy(file, d);
+                    progressBar1.Value = progressBar1.Maximum;
                 }
                 else
                 {
-                    File.Move(file, d);
+                    progressBar1.Maximum = 1;
+                    progressBar1.Value = 1;
                 }
+                SystemSounds.Beep.Play();
             }
-
-            if (progressBar1.Maximum != 0)
-            {
-                progressBar1.Value = progressBar1.Maximum;
-            }
-            else
-            {
-                progressBar1.Maximum = 1;
-                progressBar1.Value = 1;
-            }
-            SystemSounds.Beep.Play();
         }
+
         public string StringGenerator(DateTime date, string format, string ext, string title)
         {
             return format
@@ -294,12 +334,12 @@ namespace FileOrganizer
             }
         }
 
-        private void scanToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ScanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Scan(false);
         }
 
-        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Scan(true);
         }

@@ -254,7 +254,7 @@
             this.scanToolStripMenuItem.Name = "scanToolStripMenuItem";
             this.scanToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.scanToolStripMenuItem.Text = "Remove Source";
-            this.scanToolStripMenuItem.Click += new System.EventHandler(this.scanToolStripMenuItem_Click);
+            this.scanToolStripMenuItem.Click += new System.EventHandler(this.ScanToolStripMenuItem_Click);
             // 
             // copyToolStripMenuItem
             // 
@@ -262,7 +262,7 @@
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.copyToolStripMenuItem.Text = "Keep Source";
-            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
+            this.copyToolStripMenuItem.Click += new System.EventHandler(this.CopyToolStripMenuItem_Click);
             // 
             // FileOrganizer
             // 

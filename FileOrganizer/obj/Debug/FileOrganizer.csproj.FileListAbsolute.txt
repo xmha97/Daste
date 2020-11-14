@@ -1,0 +1,10 @@
+D:\xmha9\Repos\FileOrganizer\FileOrganizer\bin\Debug\FileOrganizer.exe.config
+D:\xmha9\Repos\FileOrganizer\FileOrganizer\bin\Debug\FileOrganizer.exe
+D:\xmha9\Repos\FileOrganizer\FileOrganizer\bin\Debug\FileOrganizer.pdb
+D:\xmha9\Repos\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.csprojAssemblyReference.cache
+D:\xmha9\Repos\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.FileOrganizer.resources
+D:\xmha9\Repos\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.Properties.Resources.resources
+D:\xmha9\Repos\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.csproj.GenerateResource.cache
+D:\xmha9\Repos\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.csproj.CoreCompileInputs.cache
+D:\xmha9\Repos\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.exe
+D:\xmha9\Repos\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.pdb

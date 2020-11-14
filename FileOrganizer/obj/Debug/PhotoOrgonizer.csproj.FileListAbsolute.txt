@@ -1,0 +1,11 @@
+F:\Amir\PhotoOrgonizer\PhotoOrgonizer\bin\Debug\PhotoOrgonizer.exe.config
+F:\Amir\PhotoOrgonizer\PhotoOrgonizer\bin\Debug\PhotoOrgonizer.exe
+F:\Amir\PhotoOrgonizer\PhotoOrgonizer\bin\Debug\PhotoOrgonizer.pdb
+F:\Amir\PhotoOrgonizer\PhotoOrgonizer\obj\Debug\PhotoOrgonizer.csprojAssemblyReference.cache
+F:\Amir\PhotoOrgonizer\PhotoOrgonizer\obj\Debug\PhotoOrgonizer.Properties.Resources.resources
+F:\Amir\PhotoOrgonizer\PhotoOrgonizer\obj\Debug\PhotoOrgonizer.csproj.GenerateResource.cache
+F:\Amir\PhotoOrgonizer\PhotoOrgonizer\obj\Debug\PhotoOrgonizer.csproj.CoreCompileInputs.cache
+F:\Amir\PhotoOrgonizer\PhotoOrgonizer\obj\Debug\PhotoOrgonizer.exe
+F:\Amir\PhotoOrgonizer\PhotoOrgonizer\obj\Debug\PhotoOrgonizer.pdb
+F:\Amir\PhotoOrgonizer\PhotoOrgonizer\obj\Debug\PhotoOrgonizer.PhotoOrgonizer.resources
+F:\Amir\PhotoOrgonizer\PhotoOrgonizer\obj\Debug\PhotoOrgonizer.PatternHelp.resources

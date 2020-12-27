@@ -8,3 +8,13 @@ D:\xmha9\Repos\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.csproj.Genera
 D:\xmha9\Repos\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.csproj.CoreCompileInputs.cache
 D:\xmha9\Repos\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.exe
 D:\xmha9\Repos\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.pdb
+F:\xmha9\Repos\FileOrgonizer\FileOrganizer\bin\Debug\FileOrganizer.exe.config
+F:\xmha9\Repos\FileOrgonizer\FileOrganizer\bin\Debug\FileOrganizer.exe
+F:\xmha9\Repos\FileOrgonizer\FileOrganizer\bin\Debug\FileOrganizer.pdb
+F:\xmha9\Repos\FileOrgonizer\FileOrganizer\obj\Debug\FileOrganizer.csprojAssemblyReference.cache
+F:\xmha9\Repos\FileOrgonizer\FileOrganizer\obj\Debug\FileOrganizer.FileOrganizer.resources
+F:\xmha9\Repos\FileOrgonizer\FileOrganizer\obj\Debug\FileOrganizer.Properties.Resources.resources
+F:\xmha9\Repos\FileOrgonizer\FileOrganizer\obj\Debug\FileOrganizer.csproj.GenerateResource.cache
+F:\xmha9\Repos\FileOrgonizer\FileOrganizer\obj\Debug\FileOrganizer.csproj.CoreCompileInputs.cache
+F:\xmha9\Repos\FileOrgonizer\FileOrganizer\obj\Debug\FileOrganizer.exe
+F:\xmha9\Repos\FileOrgonizer\FileOrganizer\obj\Debug\FileOrganizer.pdb

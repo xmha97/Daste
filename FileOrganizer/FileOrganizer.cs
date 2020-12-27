@@ -17,7 +17,17 @@ namespace FileOrganizer
         public FileOrganizer()
         {
             InitializeComponent();
+            int useImmersiveDarkMode = 1;
+            DwmSetWindowAttribute(Handle, DWMWA_USE_IMMERSIVE_DARK_MODE, ref useImmersiveDarkMode, sizeof(int));
         }
+
+        [DllImport("dwmapi.dll")]
+        private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
+
+        private const int DWMWA_USE_IMMERSIVE_DARK_MODE = 20;
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = false)]
+        static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr w, IntPtr l);
 
         private void Button2_Click(object sender, EventArgs e)
         {
@@ -29,8 +39,6 @@ namespace FileOrganizer
             textBox4.AppendText("--Help--\r\n<YY>	Year (20)\r\n<YYYY>	Year (2020)\r\n<M>	Month (2)\r\n<MM>	Month (02)\r\n<D>	Day (1)\r\n<DD>	Day (01)\r\n<h>	Hour (8)\r\n<hh>	Hour (08)\r\n<m>	Minute (9)\r\n<mm>	Minute (09)\r\n<s>	Second (5)\r\n<ss>	Second (05)\r\n<ex>	jpg\r\n<EX>	JPG\r\n<TITLE>	Title\r\n\r\n");
             textBox4.Focus();
         }
-        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = false)]
-        static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr w, IntPtr l);
 
         private void Button4_Click(object sender, EventArgs e)
         {

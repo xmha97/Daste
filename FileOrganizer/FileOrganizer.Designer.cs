@@ -57,11 +57,13 @@
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.BackColor = System.Drawing.Color.Black;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(7, 30);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(503, 29);
+            this.textBox1.Size = new System.Drawing.Size(504, 29);
             this.textBox1.TabIndex = 1;
             // 
             // textBox4
@@ -69,15 +71,15 @@
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox4.BackColor = System.Drawing.Color.Black;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.ForeColor = System.Drawing.Color.White;
             this.textBox4.Location = new System.Drawing.Point(7, 65);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox4.Size = new System.Drawing.Size(596, 113);
+            this.textBox4.Size = new System.Drawing.Size(597, 113);
             this.textBox4.TabIndex = 9;
-            this.textBox4.WordWrap = false;
             // 
             // progressBar1
             // 
@@ -85,19 +87,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar1.Location = new System.Drawing.Point(7, 28);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(503, 29);
+            this.progressBar1.Size = new System.Drawing.Size(504, 29);
             this.progressBar1.TabIndex = 16;
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.Color.Black;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "MP4",
             "JPG",
             "EML"});
-            this.comboBox1.Location = new System.Drawing.Point(92, 0);
+            this.comboBox1.Location = new System.Drawing.Point(95, 0);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(59, 29);
             this.comboBox1.TabIndex = 3;
@@ -107,8 +111,9 @@
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox3.BackColor = System.Drawing.Color.Black;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.ForeColor = System.Drawing.Color.White;
             this.textBox3.Location = new System.Drawing.Point(8, 76);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox3.Name = "textBox3";
@@ -131,6 +136,7 @@
             this.groupBox1.Size = new System.Drawing.Size(610, 118);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "                                     ";
             // 
             // label1
             // 
@@ -144,9 +150,11 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.Black;
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Enabled = false;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::FileOrganizer.Properties.Resources.Save;
             this.button2.Location = new System.Drawing.Point(517, 37);
             this.button2.Name = "button2";
@@ -154,14 +162,15 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Select";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox2.BackColor = System.Drawing.Color.Black;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.ForeColor = System.Drawing.Color.White;
             this.textBox2.Location = new System.Drawing.Point(8, 37);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox2.Name = "textBox2";
@@ -189,9 +198,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Location = new System.Drawing.Point(13, 12);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(609, 71);
+            this.groupBox2.Size = new System.Drawing.Size(610, 71);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Source";
@@ -202,7 +212,7 @@
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::FileOrganizer.Properties.Resources.Open;
-            this.button1.Location = new System.Drawing.Point(516, 30);
+            this.button1.Location = new System.Drawing.Point(517, 30);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 29);
             this.button1.TabIndex = 2;
@@ -219,9 +229,10 @@
             this.groupBox3.Controls.Add(this.progressBar1);
             this.groupBox3.Controls.Add(this.textBox4);
             this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Location = new System.Drawing.Point(13, 213);
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(12, 213);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(609, 186);
+            this.groupBox3.Size = new System.Drawing.Size(610, 186);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Process";
@@ -231,7 +242,7 @@
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = global::FileOrganizer.Properties.Resources.Scan;
-            this.button4.Location = new System.Drawing.Point(516, 28);
+            this.button4.Location = new System.Drawing.Point(517, 28);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(87, 29);
             this.button4.TabIndex = 8;
@@ -269,12 +280,13 @@
             this.AcceptButton = this.button4;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(634, 411);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(650, 450);

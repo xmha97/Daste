@@ -1,8 +1,5 @@
 # FileOrganizer
 
-## Social
-[![Twitter](https://img.shields.io/twitter/follow/xmha97?style=for-the-badge)](https://twitter.com/intent/follow?screen_name=xmha97)
-
 ## Screenshot
 
 ![FileOrganizer](https://i.imgur.com/DRDlsFC.png)
@@ -10,12 +7,6 @@
 ## Develop
 
 ![](https://img.shields.io/github/forks/xmha97/FileOrganizer?style=for-the-badge)
-
-## Support
-
-[![Patreon][patreon-badge]][patreon]
-[![Liberapay][liberapay-badge]][liberapay]
-[![Ko-Fi][kofi-badge]][kofi]
 
 ## License
 

@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
 using System.Media;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using PFP.Imaging;
+using System.Globalization;
 
 namespace FileOrganizer
 {
@@ -29,18 +25,40 @@ namespace FileOrganizer
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = false)]
         static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr w, IntPtr l);
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void HelpButton_Click(object sender, EventArgs e)
         {
-            Close();
-        }
-
-        private void Button6_Click(object sender, EventArgs e)
-        {
-            textBox4.AppendText("--Help--\r\n<YY>	Year (20)\r\n<YYYY>	Year (2020)\r\n<M>	Month (2)\r\n<MM>	Month (02)\r\n<D>	Day (1)\r\n<DD>	Day (01)\r\n<h>	Hour (8)\r\n<hh>	Hour (08)\r\n<m>	Minute (9)\r\n<mm>	Minute (09)\r\n<s>	Second (5)\r\n<ss>	Second (05)\r\n<ex>	jpg\r\n<EX>	JPG\r\n<TITLE>	Title\r\n\r\n");
+            textBox4.AppendText("\r\n::::::::::::::::::::::::::::::::::: Help ::::::::::::::::::::::::::::::::::::\r\n" +
+                                "::                                                                         ::\r\n" +
+                                "::  <YYYY>\t\tLonger Gregorian Taken Year\t\t2020       ::\r\n" +
+                                "::  <YY>\t\tShorter Gregorian Taken Year\t\t20         ::\r\n" +
+                                "::  <MM>\t\tLonger Gregorian Taken Month\t\t02         ::\r\n" +
+                                "::  <M>\t\t\tShorter Gregorian Taken Month\t\t2          ::\r\n" +
+                                "::  <DD>\t\tLonger Gregorian Taken Day\t\t05         ::\r\n" +
+                                "::  <D>\t\t\tShorter Gregorian Taken Day\t\t5          ::\r\n" +
+                                "::                                                                         ::\r\n" +
+                                "::  <YYYYper>\t\tLonger Persian Taken Year\t\t1398       ::\r\n" +
+                                "::  <YYper>\t\tShorter Persian Taken Year\t\t98         ::\r\n" +
+                                "::  <MMper>\t\tLonger Persian Taken Month\t\t09         ::\r\n" +
+                                "::  <Mper>\t\tShorter Persian Taken Month\t\t9          ::\r\n" +
+                                "::  <DDper>\t\tLonger Persian Taken Day\t\t03         ::\r\n" +
+                                "::  <Dper>\t\tShorter Persian Taken Day\t\t3          ::\r\n" +
+                                "::                                                                         ::\r\n" +
+                                "::  <hh>\t\tLonger Local Taken Hour\t\t\t08         ::\r\n" +
+                                "::  <h>\t\t\tShorter Local Taken Hour\t\t8          ::\r\n" +
+                                "::  <mm>\t\tLonger Local Taken Minute\t\t09         ::\r\n" +
+                                "::  <m>\t\t\tShorter Local Taken Minute\t\t9          ::\r\n" +
+                                "::  <ss>\t\tLonger Local Taken Second\t\t05         ::\r\n" +
+                                "::  <s>\t\t\tShorter Local Taken Second\t\t5          ::\r\n" +
+                                "::                                                                         ::\r\n" +
+                                "::  <ex>\t\tUppercase File Extension\t\tjpg        ::\r\n" +
+                                "::  <EX>\t\tLowercase File Extension\t\tJPG        ::\r\n" +
+                                "::  <TITLE>\t\tFile Title\t\t\t\tHalloween  ::\r\n" +
+                                "::                                                                         ::\r\n" +
+                                ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\r\n");
             textBox4.Focus();
         }
 
-        private void Button4_Click(object sender, EventArgs e)
+        private void ScanButton_Click(object sender, EventArgs e)
         {
             contextMenuStrip1.Show(Cursor.Position);
         }
@@ -219,6 +237,7 @@ namespace FileOrganizer
                 }
                 SystemSounds.Beep.Play();
             }
+            MessageBox.Show("Done!");
         }
 
         public string StringGenerator(DateTime date, string format, string ext, string title)
@@ -230,6 +249,14 @@ namespace FileOrganizer
                 .Replace("<MM>", date.Month.ToString("00"))
                 .Replace("<D>", date.Day.ToString())
                 .Replace("<DD>", date.Day.ToString("00"))
+
+                .Replace("<YYYYper>", new PersianCalendar().GetYear(date).ToString())
+                .Replace("<YYper>", new PersianCalendar().GetYear(date).ToString().Substring(2, 2))
+                .Replace("<Mper>", new PersianCalendar().GetMonth(date).ToString())
+                .Replace("<MMper>", new PersianCalendar().GetMonth(date).ToString("00"))
+                .Replace("<Dper>", new PersianCalendar().GetDayOfMonth(date).ToString())
+                .Replace("<DDper>", new PersianCalendar().GetDayOfMonth(date).ToString("00"))
+
                 .Replace("<h>", date.Hour.ToString())
                 .Replace("<hh>", date.Hour.ToString("00"))
                 .Replace("<m>", date.Minute.ToString())
@@ -330,7 +357,7 @@ namespace FileOrganizer
             textBox3.Text = it;
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void BrowseButton_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog f = new FolderBrowserDialog
             {
@@ -350,6 +377,15 @@ namespace FileOrganizer
         private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Scan(true);
+        }
+
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.Process proc = process;
+            proc.EnableRaisingEvents = false;
+            proc.StartInfo.FileName = "FileOrganizer.exe.config";
+            proc.Start();
         }
     }
 }

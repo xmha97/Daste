@@ -18,3 +18,13 @@ F:\xmha9\Repos\FileOrgonizer\FileOrganizer\obj\Debug\FileOrganizer.csproj.Genera
 F:\xmha9\Repos\FileOrgonizer\FileOrganizer\obj\Debug\FileOrganizer.csproj.CoreCompileInputs.cache
 F:\xmha9\Repos\FileOrgonizer\FileOrganizer\obj\Debug\FileOrganizer.exe
 F:\xmha9\Repos\FileOrgonizer\FileOrganizer\obj\Debug\FileOrganizer.pdb
+F:\Alireza\Desktop\FileOrganizer\FileOrganizer\bin\Debug\FileOrganizer.exe.config
+F:\Alireza\Desktop\FileOrganizer\FileOrganizer\bin\Debug\FileOrganizer.exe
+F:\Alireza\Desktop\FileOrganizer\FileOrganizer\bin\Debug\FileOrganizer.pdb
+F:\Alireza\Desktop\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.csprojAssemblyReference.cache
+F:\Alireza\Desktop\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.FileOrganizer.resources
+F:\Alireza\Desktop\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.Properties.Resources.resources
+F:\Alireza\Desktop\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.csproj.GenerateResource.cache
+F:\Alireza\Desktop\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.csproj.CoreCompileInputs.cache
+F:\Alireza\Desktop\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.exe
+F:\Alireza\Desktop\FileOrganizer\FileOrganizer\obj\Debug\FileOrganizer.pdb

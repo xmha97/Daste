@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-![FileOrganizer](https://i.imgur.com/DRDlsFC.png)
+![FileOrganizer](https://cdn.jsdelivr.net/gh/xmha97/FileOrganizer@master/icons/Screenshot.png)
 
 ## Develop
 

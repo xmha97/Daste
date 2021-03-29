@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-![FileOrganizer](https://cdn.jsdelivr.net/gh/xmha97/FileOrganizer@master/icons/Screenshot.png)
+![FileOrganizer](https://cdn.jsdelivr.net/gh/xmha97/FileOrganizer@master/Screenshot.png)
 
 ## Develop
 

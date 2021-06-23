@@ -1,0 +1,10 @@
+D:\xmha97\Documents\GitHub\Daste\Daste\bin\Debug\Daste.exe.config
+D:\xmha97\Documents\GitHub\Daste\Daste\bin\Debug\Daste.exe
+D:\xmha97\Documents\GitHub\Daste\Daste\bin\Debug\Daste.pdb
+D:\xmha97\Documents\GitHub\Daste\Daste\obj\Debug\Daste.csproj.AssemblyReference.cache
+D:\xmha97\Documents\GitHub\Daste\Daste\obj\Debug\Daste.Daste.resources
+D:\xmha97\Documents\GitHub\Daste\Daste\obj\Debug\Daste.Properties.Resources.resources
+D:\xmha97\Documents\GitHub\Daste\Daste\obj\Debug\Daste.csproj.GenerateResource.cache
+D:\xmha97\Documents\GitHub\Daste\Daste\obj\Debug\Daste.csproj.CoreCompileInputs.cache
+D:\xmha97\Documents\GitHub\Daste\Daste\obj\Debug\Daste.exe
+D:\xmha97\Documents\GitHub\Daste\Daste\obj\Debug\Daste.pdb

@@ -13,6 +13,18 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <ShouldCreateLogs>True</ShouldCreateLogs>
+    <AdvancedSettingsExpanded>False</AdvancedSettingsExpanded>
+    <UpdateAssemblyVersion>True</UpdateAssemblyVersion>
+    <UpdateAssemblyFileVersion>True</UpdateAssemblyFileVersion>
+    <UpdateAssemblyInfoVersion>True</UpdateAssemblyInfoVersion>
+    <UpdatePackageVersion>False</UpdatePackageVersion>
+    <AssemblyInfoVersionType>SettingsVersion</AssemblyInfoVersionType>
+    <InheritWinAppVersionFrom>AssemblyFileVersion</InheritWinAppVersionFrom>
+    <AssemblyVersionSettings>ShortYearStamp.MonthStamp.DayStamp.TimeStamp</AssemblyVersionSettings>
+    <AssemblyFileVersionSettings>ShortYearStamp.MonthStamp.DayStamp.TimeStamp</AssemblyFileVersionSettings>
+    <AssemblyInfoVersionSettings>ShortYearStamp.MonthStamp.DayStamp.TimeStamp</AssemblyInfoVersionSettings>
+    <ApplicationVersion>21.6.23.2354</ApplicationVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -127,6 +139,8 @@
   <ItemGroup>
     <Content Include="Icon.ico" />
     <Content Include="MediaInfo.dll" />
+    <None Include="Resources\Rename.png" />
+    <None Include="Resources\Stop.png" />
     <None Include="Resources\Cut.png" />
     <None Include="Resources\Copy.png" />
     <None Include="Resources\Save.png" />

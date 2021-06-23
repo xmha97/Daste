@@ -37,7 +37,7 @@ namespace Daste.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("<YYYY>\\<MM>\\<DD>\\<YYYY><MM><DD>_<hh><mm><ss>.<ex>")]
+        [global::System.Configuration.DefaultSettingValueAttribute("<YYYYper>\\<YYYYper>-<MMper>\\<YYYY><MM><DD>_<hh><mm><ss>.<ex>")]
         public string PatternMP4 {
             get {
                 return ((string)(this["PatternMP4"]));
@@ -49,25 +49,13 @@ namespace Daste.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("<YYYY>\\<MM>\\<DD>\\<YYYY><MM><DD>_<hh><mm><ss>.<ex>")]
+        [global::System.Configuration.DefaultSettingValueAttribute("<YYYYper>\\<YYYYper>-<MMper>\\<YYYY><MM><DD>_<hh><mm><ss>.<ex>")]
         public string PatternJPG {
             get {
                 return ((string)(this["PatternJPG"]));
             }
             set {
                 this["PatternJPG"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("<YYYY>-<MM>-<DD>\\<YYYY><TITLE>.<ex>")]
-        public string PatternEML {
-            get {
-                return ((string)(this["PatternEML"]));
-            }
-            set {
-                this["PatternEML"] = value;
             }
         }
         
@@ -104,6 +92,42 @@ namespace Daste.Properties {
             }
             set {
                 this["DestPathEML"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<YYYYper>\\<YYYYper>-<MMper>\\<YYYY><MM><DD>_<hh><mm><ss>.<ex>")]
+        public string PatternMOV {
+            get {
+                return ((string)(this["PatternMOV"]));
+            }
+            set {
+                this["PatternMOV"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<YYYYper>-<MMper>\\<DDper>-<TITLE>.<ex>")]
+        public string PatternEML {
+            get {
+                return ((string)(this["PatternEML"]));
+            }
+            set {
+                this["PatternEML"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Public\\Pictures\\Camera Roll")]
+        public string DestPathMOV {
+            get {
+                return ((string)(this["DestPathMOV"]));
+            }
+            set {
+                this["DestPathMOV"] = value;
             }
         }
     }

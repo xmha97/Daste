@@ -5,7 +5,7 @@
 
 ## Screenshot
 
-![Daste](https://i.imgur.com/DRDlsFC.png)
+![Daste](https://raw.githubusercontent.com/xmha97/Daste/master/Screenshot.png)
 
 ## Develop
 

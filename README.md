@@ -1,11 +1,11 @@
 # Daste
-Organize your files with Daste app. It's free.
+![Daste](https://user-images.githubusercontent.com/23485114/123182996-d4370500-d4a5-11eb-93d4-4e9519143337.png)
+
+# About
+Organize your files with Daste app.
 
 ## Develop
 ![](https://img.shields.io/github/forks/xmha97/Daste?style=for-the-badge)
-
-## Screenshot
-![Daste](https://user-images.githubusercontent.com/23485114/123182996-d4370500-d4a5-11eb-93d4-4e9519143337.png)
 
 ## License
 [![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)  

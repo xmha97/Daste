@@ -8,6 +8,7 @@
 * Support `MP4` and `MOV` video files.
 * Support `JPG` photo files.
 * Support `EML` email files.
+* Support dark theme.
 
 ## Requirements
 - Windows 7 or newer.

@@ -1,4 +1,5 @@
-# Organize your files with Daste app.
+# Daste
+Organize your files with Daste app. It's free.
 
 ## Develop
 ![](https://img.shields.io/github/forks/xmha97/Daste?style=for-the-badge)

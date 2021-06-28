@@ -3,12 +3,12 @@
 [![GitHub Forks](https://img.shields.io/github/forks/xmha97/Daste?style=flat-square)](https://github.com/xmha97/Daste/network)
 [![GitHub Stars](https://img.shields.io/github/stars/xmha97/Daste?style=flat-square)](https://github.com/xmha97/Daste/stargazers)
 [![GitHub License](https://img.shields.io/github/license/xmha97/Daste?style=flat-square)](https://github.com/xmha97/Daste/blob/master/LICENSE)  
-Organize your files with Daste app.
+**Daste** is a simple tool for organize your files.
 
 ## Features
-* Support `MP4` and `MOV` video files.
-* Support `JPG` photo files.
-* Support `EML` email files.
+* Support video file formats: `MP4`, `MOV`
+* Support photo file formats: `JPG`
+* Support email file formats: `EML`
 * Support dark theme.
 
 ## Requirements

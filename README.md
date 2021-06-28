@@ -1,5 +1,4 @@
 # Daste
-![Daste](https://user-images.githubusercontent.com/23485114/123590844-7b969d80-d800-11eb-9b54-9a54fce3cac8.png)
 Organize your files with Daste app.
 
 ## Installing & Running

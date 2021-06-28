@@ -1,11 +1,8 @@
-# Daste
+# Daste: file organizer
 [![GitHub Issues](https://img.shields.io/github/issues/xmha97/Daste?style=flat-square)](https://github.com/xmha97/Daste/issues)
 [![GitHub Forks](https://img.shields.io/github/forks/xmha97/Daste?style=flat-square)](https://github.com/xmha97/Daste/network)
 [![GitHub Stars](https://img.shields.io/github/stars/xmha97/Daste?style=flat-square)](https://github.com/xmha97/Daste/stargazers)
 [![GitHub License](https://img.shields.io/github/license/xmha97/Daste?style=flat-square)](https://github.com/xmha97/Daste/blob/master/LICENSE)
-
-## About
-Organize your files with Daste app.
 
 ## Requirements
 - Windows 7 or newer.

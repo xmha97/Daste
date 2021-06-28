@@ -1,4 +1,4 @@
-# Daste: file organizer
+# Daste File Organizer
 [![GitHub Issues](https://img.shields.io/github/issues/xmha97/Daste?style=flat-square)](https://github.com/xmha97/Daste/issues)
 [![GitHub Forks](https://img.shields.io/github/forks/xmha97/Daste?style=flat-square)](https://github.com/xmha97/Daste/network)
 [![GitHub Stars](https://img.shields.io/github/stars/xmha97/Daste?style=flat-square)](https://github.com/xmha97/Daste/stargazers)

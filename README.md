@@ -9,9 +9,7 @@ Organize your files with Daste app.
 - Have [.NET Core 3.1.14 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-3.1.14-windows-x64-installer).
 
 ## Contributing
-This project welcomes contributions of all types.
-
-![](https://img.shields.io/github/forks/xmha97/Daste?style=for-the-badge)
+This project welcomes contributions of all types. [[Fork]](https://github.com/xmha97/Daste/fork)
 
 ## License
 [![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)  

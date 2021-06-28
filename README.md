@@ -6,14 +6,14 @@
 **Daste** is a simple tool for organize your files.
 
 ## Features
-* Supported batch of formats:
+* Organize any file:
 
 | Type   | Formats     |
 |--------|-------------|
 | Videos | `MP4` `MOV` |
 | Photos | `JPG`       |
 | Emails | `EML`       |
-
+* Support dark theme
 ## Requirements
 - Windows 7 or newer.
 - Have [.NET Core 3.1.14 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-3.1.14-windows-x64-installer).

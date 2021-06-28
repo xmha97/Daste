@@ -1,7 +1,7 @@
 # Daste
 ![Daste](https://user-images.githubusercontent.com/23485114/123182996-d4370500-d4a5-11eb-93d4-4e9519143337.png)
 
-# About
+## About
 Organize your files with Daste app.
 
 ## Develop

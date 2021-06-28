@@ -1,5 +1,8 @@
 # Daste
-[![GitHub issues](https://img.shields.io/github/issues/File-New-Project/EarTrumpet?style=flat-square)](https://github.com/File-New-Project/EarTrumpet/issues) [![GitHub forks](https://img.shields.io/github/forks/File-New-Project/EarTrumpet?style=flat-square)](https://github.com/File-New-Project/EarTrumpet/network) [![GitHub stars](https://img.shields.io/github/stars/File-New-Project/EarTrumpet?style=flat-square)](https://github.com/File-New-Project/EarTrumpet/stargazers) [![GitHub license](https://img.shields.io/github/license/File-New-Project/EarTrumpet?style=flat-square)](https://github.com/File-New-Project/EarTrumpet/blob/master/LICENSE)
+[![GitHub Issues](https://img.shields.io/github/issues/xmha97/Daste?style=flat-square)](https://github.com/xmha97/Daste/issues)
+[![GitHub Forks](https://img.shields.io/github/forks/xmha97/Daste?style=flat-square)](https://github.com/xmha97/Daste/network)
+[![GitHub Stars](https://img.shields.io/github/stars/xmha97/Daste?style=flat-square)](https://github.com/xmha97/Daste/stargazers)
+[![GitHub License](https://img.shields.io/github/license/xmha97/Daste?style=flat-square)](https://github.com/xmha97/Daste/blob/master/LICENSE)
 
 ## About
 Organize your files with Daste app.
@@ -9,4 +12,4 @@ Organize your files with Daste app.
 - Have [.NET Core 3.1.14 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-3.1.14-windows-x64-installer).
 
 ## Installing
-Install EarTrumpet from the Github
+Install from the Github

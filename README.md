@@ -21,4 +21,4 @@
 - Have [.NET Core 3.1.14 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-3.1.14-windows-x64-installer).
 
 ## Installing
-Install from the Github
+Install from the [Github](https://github.com/xmha97/Daste/releases)

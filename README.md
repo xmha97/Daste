@@ -8,11 +8,13 @@
 ## Features
 * Organize any file:
 
-| Type   | Formats     |
-|--------|-------------|
-| Videos | `MP4` `MOV` |
-| Photos | `JPG`       |
-| Emails | `EML`       |
+| Type             | Formats              |
+|------------------|----------------------|
+| Videos (soon)    | `MP4` `MOV` `MKV`    |
+| Pictures (soon)  | `JPG` `PNG` `BMP`    |
+| Web (soon)       | `EML` `HTM` `HTML`   |
+| Music (soon)     | `MP3` `WAV` `M4A`    |
+| Documents (soon) | `DOCX` `PPTX` `XLSX` |
 * Support dark theme
 ## Requirements
 - Windows 7 or newer.

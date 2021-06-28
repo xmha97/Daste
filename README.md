@@ -6,10 +6,13 @@
 **Daste** is a simple tool for organize your files.
 
 ## Features
-* Support video file formats: `MP4`, `MOV`
-* Support photo file formats: `JPG`
-* Support email file formats: `EML`
-* Support dark theme.
+* Supported batch of formats:
+
+| Type   | Formats     |
+|--------|-------------|
+| Videos | `MP4` `MOV` |
+| Photos | `JPG`       |
+| Emails | `EML`       |
 
 ## Requirements
 - Windows 7 or newer.
